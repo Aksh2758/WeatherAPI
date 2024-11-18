@@ -27,4 +27,4 @@ A dynamic weather application that provides real-time weather updates based on u
 1. **Clone the repository**:  
    ```bash  
    git clone https://github.com/Aksh2758/WeatherAPI.git  
-   cd weather-website  
+   cd Weather API  
