@@ -1,6 +1,6 @@
 /* Updated CSS for improved design */
 body {
-    background-image: url("/assets/img/image.png");
+    background-image: url("../img/image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

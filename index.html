@@ -6,7 +6,6 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
@@ -14,20 +13,17 @@
         <h1>Weather App</h1>
         <div id="inputSection">
             <input type="text" id="cityInput" placeholder="Enter a city name">
-            <button onclick="getWeather()">Get Weather</button>
+            <button id="getWeatherBtn()">Get Weather</button>
         </div>
-        <!-- New content container -->
+
         <div id="content">
             <div id="weatherDisplay"></div>
             <div id="map"></div>
         </div>
     </div>
-    <!-- Existing scripts -->
+
     <script src="assets/js/script.js"></script>
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-
 </body>
-
 </html>

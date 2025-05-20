@@ -1,0 +1,17 @@
+# IDE specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# If you ever use Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Potentially a local config for API key if you don't proxy
+# config.js
+# .env

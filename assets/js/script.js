@@ -1,7 +1,23 @@
-const apiKey = 'API_KEY'; 
+const apiKey ='9f647b195e0c3cd3d4604b0a071e54dd' ; 
 
-let map; // Declare map variable globally
-let marker; // To hold the marker on the map
+let map; 
+let marker; 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cityInput = document.getElementById('cityInput');
+    const getWeatherBtn = document.querySelector('#inputSection button'); 
+    if (getWeatherBtn) {
+        getWeatherBtn.addEventListener('click', getWeather);
+    }
+    if (cityInput) {
+        cityInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                getWeather();
+            }
+        });
+    }
+});
 
 async function getWeather() {
     const city = document.getElementById('cityInput').value;
@@ -75,8 +91,7 @@ function displayWeather(data) {
 
 function addRainEffect() {
     let rainContainer = document.querySelector('.rain');
-
-    // Remove any existing rain effect before adding new raindrops
+    
     if (rainContainer) {
         rainContainer.remove();
     }
@@ -90,8 +105,8 @@ function addRainEffect() {
         let drop = document.createElement('div');
         drop.classList.add('drop');
         drop.style.left = `${Math.random() * 100}vw`;
-        drop.style.animationDuration = `${Math.random() * 2 + 1.5}s`; // Vary the speed of drops
-        drop.style.animationDelay = `${Math.random() * 1.5}s`; // Delay for staggered effect
+        drop.style.animationDuration = `${Math.random() * 2 + 1.5}s`; 
+        drop.style.animationDelay = `${Math.random() * 1.5}s`;
         rainContainer.appendChild(drop);
     }
     
@@ -99,29 +114,25 @@ function addRainEffect() {
 function stopRainEffect() {
     let rainContainer = document.querySelector('.rain');
     if (rainContainer) {
-        rainContainer.remove(); // Remove the rain container to stop the rain effect
+        rainContainer.remove(); 
     }
 }
 
 function initMap(lat, lon, name, country='Unknown') {
     const mapContainer = document.getElementById('map');
-    mapContainer.style.display = 'block'; // Make the map container visible
+    mapContainer.style.display = 'block'; 
 
     if (!map) {
-        // Initialize the map if it doesn't exist
         map = L.map('map').setView([lat, lon], 10);
 
-        // Add the tile layer (OpenStreetMap tiles)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
     } else {
-        // If map already exists, just set the new view
         map.setView([lat, lon], 10);
     }
 
     if (marker) {
-        // Remove existing marker
         map.removeLayer(marker);
     }
 
