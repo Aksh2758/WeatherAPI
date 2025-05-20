@@ -69,16 +69,26 @@ To run this project locally, follow these steps:
 
 ## Project Structure
 .
-├── index.html # Main HTML file 
-├── assets/
-│ ├── css/
-│ │ └── style.css # Main stylesheet
-│ ├── js/
-│ │ └── script.js # Main JavaScript file
-│ └── img/
-│ └── image.png # Default background image
-└── README.md # This file
 
+├── index.html # Main HTML file
+
+├── assets/
+
+│ ├── css/
+
+│ │ └── style.css # Main stylesheet
+
+│ ├── js/
+
+│ │ └── script.js # Main JavaScript file
+
+│ └── img/
+
+│ └── image.png # Default background image (and others if any)
+
+├── .gitignore # Specifies intentionally untracked files that Git should ignore
+
+└── README.md # This file
 
 ## Future Enhancements (Possible Ideas)
 
